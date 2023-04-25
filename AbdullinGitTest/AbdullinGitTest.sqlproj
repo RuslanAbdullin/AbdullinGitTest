@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>AbdullinGitTest</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f0cf9408-895c-4b59-abca-0954bfc0d328}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>AbdullinGitTest</RootNamespace>
+    <AssemblyName>AbdullinGitTest</AssemblyName>
+    <ModelCollation>1049,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Cyrillic_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="oth\" />
+    <Folder Include="oth\Tables\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="oth\Stored Procedures\" />
+    <Folder Include="stg\" />
+    <Folder Include="stg\Stored Procedures\" />
+    <Folder Include="Assemblies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\WmiData.sql" />
+    <Build Include="oth\Tables\sup_log.sql" />
+    <Build Include="oth\Tables\bad_passwords.sql" />
+    <Build Include="dbo\Tables\RAM_process.sql" />
+    <Build Include="dbo\Tables\EUCLID 2022_05_17 10_37_52.sql" />
+    <Build Include="dbo\Tables\trace_20220517.sql" />
+    <Build Include="dbo\Tables\t_fact_GoodsMvmnt_by_month.sql" />
+    <Build Include="dbo\Tables\lasmart_fact_cheques.sql" />
+    <Build Include="dbo\Tables\test_tran.sql" />
+    <Build Include="oth\Tables\log_check_xml_xsd.sql" />
+    <Build Include="dbo\Tables\Alcorep.sql" />
+    <Build Include="dbo\Tables\test_XML.sql" />
+    <Build Include="dbo\Tables\test.sql" />
+    <Build Include="dbo\Tables\test_XML_copy.sql" />
+    <Build Include="dbo\Tables\Location.sql" />
+    <Build Include="dbo\Tables\table1.sql" />
+    <Build Include="dbo\Tables\table2.sql" />
+    <Build Include="dbo\Tables\table1_tiny.sql" />
+    <Build Include="dbo\Tables\check_total_alcorep.sql" />
+    <Build Include="dbo\Tables\test_pr.sql" />
+    <Build Include="dbo\Tables\test_postavka.sql" />
+    <Build Include="dbo\Tables\test_log.sql" />
+    <Build Include="dbo\Tables\fact_sub.sql" />
+    <Build Include="dbo\Tables\manager_sub.sql" />
+    <Build Include="dbo\Tables\manager_lead.sql" />
+    <Build Include="dbo\Tables\MLK_Contract_PP.sql" />
+    <Build Include="dbo\Tables\MLK_Article_PP.sql" />
+    <Build Include="dbo\Tables\MLK_Good_PP.sql" />
+    <Build Include="dbo\Tables\test_parallel.sql" />
+    <Build Include="dbo\Tables\Sales.sql" />
+    <Build Include="dbo\Tables\error_CLR.sql" />
+    <Build Include="dbo\Tables\session_CLR.sql" />
+    <Build Include="dbo\Tables\config_CLR.sql" />
+    <Build Include="dbo\Tables\pvt.sql" />
+    <Build Include="dbo\Tables\t_sup_log_Mainteanance.sql" />
+    <Build Include="dbo\Tables\big_table.sql" />
+    <Build Include="Storage\OLD_FACT.sql" />
+    <Build Include="Storage\NEW_FACT_SSD.sql" />
+    <Build Include="Storage\FAST_FACT.sql" />
+    <Build Include="Storage\fg_01.sql" />
+    <Build Include="Storage\fg_02.sql" />
+    <Build Include="Storage\fg_03.sql" />
+    <Build Include="Security\Petrova.sql" />
+    <Build Include="Security\Petrova_1.sql" />
+    <Build Include="Security\test_user.sql" />
+    <Build Include="Security\test_user_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\udf_GetNumeric.sql" />
+    <Build Include="dbo\Functions\FnSplit.sql" />
+    <Build Include="dbo\Stored Procedures\SPROC_tempdbMemOptimzedtest_1.sql" />
+    <Build Include="dbo\Stored Procedures\SPROC_tempdbMemOptimzedtest_2.sql" />
+    <Build Include="oth\Stored Procedures\fill_sup_log.sql" />
+    <Build Include="dbo\Stored Procedures\fill_RAM_process.sql" />
+    <Build Include="stg\Stored Procedures\procedure_test.sql" />
+    <Build Include="dbo\Stored Procedures\procedure_test.sql" />
+    <Build Include="dbo\Stored Procedures\xml_for_xml.sql" />
+    <Build Include="dbo\Stored Procedures\xml_for_varchar.sql" />
+    <Build Include="dbo\Stored Procedures\p_check_total_alcorep.sql" />
+    <Build Include="dbo\Stored Procedures\xml_exec.sql" />
+    <Build Include="dbo\Stored Procedures\get_file_name.sql" />
+    <Build Include="dbo\Stored Procedures\test_proc.sql" />
+    <Build Include="dbo\Stored Procedures\fill_config_CLR.sql" />
+    <Build Include="dbo\Stored Procedures\get_exec_config_CLR.sql" />
+    <Build Include="dbo\Stored Procedures\finish_exec_config_CLR.sql" />
+    <Build Include="dbo\Stored Procedures\update_session_CLR.sql" />
+    <Build Include="dbo\Stored Procedures\p_Maintenance_database.sql" />
+    <Build Include="oth\Stored Procedures\SaveAssembly.sql" />
+    <Build Include="dbo\Stored Procedures\test_clr.sql" />
+    <Build Include="dbo\Stored Procedures\fina_clr.sql" />
+    <Build Include="dbo\Stored Procedures\multithread_update_start.sql" />
+    <Build Include="Storage\F_DAY_PF.sql" />
+    <Build Include="Storage\F_DAY_PS.sql" />
+    <Build Include="Security\oth.sql" />
+    <Build Include="Security\stg.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assemblies\test_parallel.dll" />
+    <None Include="Assemblies\parallel_final.dll" />
+    <None Include="Assemblies\MultithreadStart.dll" />
+    <None Include="Assemblies\ExportDllFromSQLServer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="test_parallel">
+      <HintPath>Assemblies\test_parallel.dll</HintPath>
+      <SqlAssemblyName>test_parallel</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>UNSAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="parallel_final">
+      <HintPath>Assemblies\parallel_final.dll</HintPath>
+      <SqlAssemblyName>parallel_final</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>UNSAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="MultithreadStart">
+      <HintPath>Assemblies\MultithreadStart.dll</HintPath>
+      <SqlAssemblyName>MultithreadStart</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>UNSAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="ExportDllFromSQLServer">
+      <HintPath>Assemblies\ExportDllFromSQLServer.dll</HintPath>
+      <SqlAssemblyName>ExportDllFromSQLServer</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>EXTERNAL_ACCESS</SqlPermissionSet>
+    </Reference>
+  </ItemGroup>
+</Project>
