@@ -1,7 +1,7 @@
 ﻿create procedure [dbo].[p_check_total_alcorep]
 as
 begin
-	SELECT 1 --- 20230425
+	SELECT 1 --- 20230405
 	if object_id ('tempdb..#total_Alcorep') is not null drop table #total_Alcorep
 	if object_id ('tempdb..#total_xml') is not null drop table #total_xml
 	--тотлы таблицы alcorep
