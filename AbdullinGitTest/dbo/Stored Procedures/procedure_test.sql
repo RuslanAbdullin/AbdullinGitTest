@@ -1,3 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[procedure_test]
 AS
 SELECT 1
+
+UNION ALL
+
+SELECT 2
+
+UNION ALL
+
+SELECT 3
